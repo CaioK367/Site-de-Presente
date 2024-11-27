@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./quiz/style.css">
+    <link rel="shortcut icon" href="./Resources/imgs/Favicon/android-chrome-512x512.png" type="image/x-icon">
+    <title>Quiz super difícil</title>
+</head>
+<body>
+    <div class="typing-container">
+        <p id="typing-text"></p>
+    </div>
+    <div class="container">
+        <div class="forms">
+            <label for="doce-favorito">Qual seu doce favorito?</label>
+            <div>
+                <input type="radio" id="palha" name="doce" value="0">
+                <span>Palha Italiana</span>
+            </div>
+            <div>
+                <input type="radio" id="brownie" name="doce" value="0">
+                <span>Brownie</span>
+            </div>
+            <div>
+                <input type="radio" id="brigadeiro" name="doce" value="0">
+                <span>Brigadeiro</span>
+            </div>
+            <div>
+                <input type="radio" id="sorvete" name="doce" value="0">
+                <span>Sorvete</span>
+            </div>
+            <div>
+                <input type="radio" id="eu" name="doce" value="1">
+                <span>EU ❤️ (Porque sou um docinho)</span>
+            </div>
+        </div>
+        <div id="incorrect-message" style="display: none;">
+            Resposta errada! Tente novamente.
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Resposta correta! Parabéns!</p>
+            <button id="advance-button">Avançar</button>
+        </div>
+    </div>
+
+    <script src="./quiz/quiz.js"></script>
+</body>
+</html>

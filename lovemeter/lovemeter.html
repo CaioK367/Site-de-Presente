@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lovemeter.css">
+    <link rel="shortcut icon" href="../Resources/imgs/Favicon/android-chrome-512x512.png" type="image/x-icon">
+    <title>Medidor de Amor</title>
+</head>
+<body>
+    <!-- Botão de Voltar -->
+    <a href="../index.html" id="back-button" class="back-button">Voltar</a>
+
+    <div class="container">
+        <div id="question-message" class="question-message">Agora, me fale o quanto você me ama!!!</div>
+
+        <!-- Imagem -->
+        <img src="../Resources/imgs/casal.jpg" alt="Foto de amor" id="amor-image" class="amor-image" />
+
+        <div id="amor-message" class="amor-message"></div>
+        <p id="redirect-message" style="display: none; font-size: 18px; color: #5a2d82; font-weight: bold; margin-top: 20px;">
+            Redirecionando...
+        </p>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <!-- Medidor de Amor -->
+        <div class="medidor-container">
+            <button id="decrease" class="button">-</button>
+            <span id="medidor-display" class="medidor-display">0%</span>
+            <button id="increase" class="button">+</button>
+        </div>
+    </div>
+
+    <!-- Overlay para fundo desfocado -->
+    <div id="overlay" class="overlay">
+        <div class="redirect-message">Redirecionando...</div>
+    </div>
+
+    <script src="./lovemeter.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    background: linear-gradient(135deg, #d3a4f4, #f2c9f5); /* Gradiente pastel */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Contêiner centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    gap: 20px; /* Espaço entre os elementos */
+}
+
+/* Texto superior */
+.top-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a2d82;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem vertical */
+.vertical-image {
+    max-height: 60vh; /* Ajusta a altura máxima para caber em telas menores */
+    width: auto; /* Mantém a proporção da imagem */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    animation: fadeIn 1s ease; /* Animação de entrada */
+}
+
+/* Texto inferior */
+.bottom-text {
+    font-size: 20px;
+    color: #5a2d82;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Estilo do botão de voltar */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+}
+
+.back-button button {
+    background: linear-gradient(135deg, #5a2d82, #d3a4f4); /* Gradiente do botão */
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button button:hover {
+    background: linear-gradient(135deg, #7b3f92, #d3a4f4);
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}

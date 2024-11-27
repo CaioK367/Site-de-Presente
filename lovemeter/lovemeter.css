@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    background: linear-gradient(135deg, #d3a4f4, #f2c9f5); /* Gradiente pastel */
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilo do botão de voltar */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #5a2d82, #d3a4f4); /* Gradiente do botão */
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button button:hover {
+    background: linear-gradient(135deg, #7b3f92, #d3a4f4);
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.question-message {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #7b3f92;
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.amor-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #5a2d82;
+    max-width: 100%;
+}
+
+.amor-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #7b3f92;
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.medidor-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.medidor-display {
+    font-size: 32px;
+    font-weight: bold;
+    color: #5a2d82;
+    margin: 0 20px;
+    min-width: 60px;
+}
+
+.button {
+    background-color: #5a2d82;
+    color: white;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #7b3f92;
+}
+
+
+#redirect-message {
+    font-size: 18px;
+    color: #5a2d82;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(10px); /* Aplica o desfoque no fundo */
+    display: none; /* Inicialmente escondido */
+    z-index: 9999; /* Certifica-se de que o overlay fique acima de outros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.redirect-message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a2d82;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    .amor-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .medidor-display {
+        font-size: 28px;
+    }
+
+    .button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    #back-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* Contêiner da barra de progresso */
+.progress-container {
+    width: 80%; /* Largura da barra */
+    height: 20px; /* Altura da barra */
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo translúcido */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Impede o conteúdo de sair das bordas */
+    margin: 20px auto; /* Centraliza a barra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de progresso */
+.progress-bar {
+    height: 100%;
+    width: 0; /* Começa vazia */
+    background-color: #5a2d82; /* Cor da barra */
+    border-radius: 10px; /* Arredondamento */
+    transition: width 0.3s ease-in-out; /* Suavidade na transição */
+}

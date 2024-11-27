@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./text.css">
+    <link rel="shortcut icon" href="../Resources/imgs/Favicon/android-chrome-512x512.png" type="image/x-icon">
+    <title>Meus Dias com Você</title>
+</head>
+<body>
+    <div class="typing-container">
+        <p id="typing-text"></p>
+    </div>
+
+    <!-- Botão de Voltar -->
+    <a href="../question/question.html" id="back-button" class="back-button">Voltar</a>
+
+    <div class="container">
+        <!-- Frase centralizada -->
+        <div class="message">
+            Agora, meus dias com você:
+        </div>
+
+        <!-- Botão para avançar -->
+        <button id="next-button" class="next-button">Avançar</button>
+    </div>
+
+    <script>
+        // Redirecionar para a próxima página ao clicar no botão
+        document.getElementById('next-button').addEventListener('click', function() {
+            window.location.href = "../drawing-happy/dh.html"; // Substitua pelo caminho da próxima página
+        });
+    </script>
+</body>
+</html>
