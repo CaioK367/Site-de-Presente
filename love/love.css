@@ -31,11 +31,16 @@ body {
 
 /* Imagem vertical */
 .vertical-image {
-    max-height: 60vh; /* Ajusta a altura máxima para caber em telas menores */
-    width: auto; /* Mantém a proporção da imagem */
     border-radius: 12px; /* Bordas arredondadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
     animation: fadeIn 1s ease; /* Animação de entrada */
+    width: 100%; /* A imagem ocupará 100% da largura do container */
+    max-width: 500px; /* Limite máximo de largura */
+    height: auto; /* A altura se ajusta automaticamente de acordo com a largura */
+    object-fit: contain; /* Garante que a imagem seja redimensionada sem distorção */
+    border-radius: 50%; /* Mantém a borda arredondada */
+    margin-bottom: 20px;
+    border: 5px solid #5a2d82; /* Adiciona a borda roxa */
 }
 
 /* Texto inferior */
